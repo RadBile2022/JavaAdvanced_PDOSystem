@@ -1,22 +1,35 @@
-import entities.Product;
-import models.ProductManager;
-import utilities.DBServices;
-
-public class TestUnit {
-    public static void main(String[] args) {
-        ProductManager pm = new ProductManager();
-        /// use case register product --> take
-        Product p = new Product("SKU1000002", "Pizza Meet Lover", 23);
-        pm.registerProduct(p);
-        pm.registerProduct(new Product("SKU100034", "Salad Buah", 12));
-        // print All Product
-        pm.printAllProduct();
-        pm.remove(p);
-        pm.printAllProduct();
-        // kalau DB ngene thok
-//        DBServices.save(pm);
-        System.out.println(pm.findProductById("SKU100034") + "ketemu");
-
-
-    }
-}
+//import controllers.OMControllers;
+//import controllers.PMController;
+//import models.Order;
+//import entities.Product;
+//import entities.Shop;
+//import models.Item;
+//import models.OrderManager;
+//import models.ProductManager;
+//
+//public class TestUnit {
+//    // View
+//    public static void main(String[] args) {
+//
+//        Shop shop = new Shop("Pizza Store");
+//        ProductManager pm = new ProductManager();
+//        PMController pmController = new PMController(pm);
+//        /// use case register product --> toko
+//        Product p = new Product("SKU1000002", "Pizza Meet Lover", 20);
+//        pmController.registerProduct(p);
+//        pmController.registerProduct(new Product("SKU1000034", "Salad Buah", 12));
+//        // use case Order
+//        OrderManager om = new OrderManager();
+//        OMControllers omControllers = new OMControllers(om);
+//        Order order = omControllers.createOrder(shop);
+//        // loop
+//        order.addItem(new Item(pm.findProductById("SKU1000002"),3));
+//        order.addItem(new Item(pm.findProductById("SKU1000034"),5));
+//        order.cetakInvoice();
+//        omControllers.addOrder(order);
+//        omControllers.printAllOrder();
+//        pmController.printAllProducts();
+//
+//
+//    }
+//}

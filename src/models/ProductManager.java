@@ -8,10 +8,10 @@ import java.util.List;
 public class ProductManager {
     private List<Product> productList = new ArrayList<>();
 
-
     public void registerProduct(Product p) {
         productList.add(p);
     }
+
 
     public void printAllProduct() {
         for (Product p : productList){
@@ -29,7 +29,6 @@ public class ProductManager {
                 return p;
             }
         }
-
         return null;
     }
 }
