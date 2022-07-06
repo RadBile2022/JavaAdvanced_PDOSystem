@@ -13,10 +13,8 @@ public class ProductManager {
     }
 
 
-    public void printAllProduct() {
-        for (Product p : productList){
-            System.out.println(p);
-        }
+    public List<Product> getProductList() {
+        return productList;
     }
 
     public void remove(Product p) {

@@ -6,13 +6,13 @@ import entities.Shop;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public class Order{
     private Shop shop;
     private List<Item> items = new ArrayList<>();
 
-    public Order(Shop shop) {
-        this.shop = shop;
-    }
+//    public Order(Shop shop) {
+//        this.shop = shop;
+//    }
 
     public void addItem(Item item) {
         items.add(item);

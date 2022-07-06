@@ -4,17 +4,16 @@ import entities.Shop;
 import models.Order;
 import models.OrderManager;
 
-public class OMControllers {
+public class OMController {
     private OrderManager om;
     private Order order;
 
-    public OMControllers(OrderManager om) {
+    public OMController(OrderManager om) {
         this.om = om;
     }
-
-    public Order createOrder(Shop shop) {
-        return om.createOrder(shop);
-    }
+//    public Order createOrder(Shop shop) {
+//        return om.createOrder(shop);
+//    }
 
     public void addOrder(Order order) {
         om.addOrder(order);

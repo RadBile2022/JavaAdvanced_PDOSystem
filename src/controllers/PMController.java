@@ -3,6 +3,8 @@ package controllers;
 import entities.Product;
 import models.ProductManager;
 
+import java.util.List;
+
 public class PMController {
     private ProductManager pm;
 
@@ -15,7 +17,12 @@ public class PMController {
         pm.registerProduct(p);
     }
 
-    public void printAllProducts() {
-        pm.printAllProduct();
+    public List<Product> printAllProducts() {
+        return pm.getProductList();
+    }
+
+
+    public Product findProductById(String id) {
+        return pm.findProductById(id);
     }
 }
